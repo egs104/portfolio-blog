@@ -1,4 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function Badge(props: any) {
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-4 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
+    />
+  );
+}
 
 export default function Home() {
   return (
@@ -9,7 +21,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Hello, I&apos;m Your Eric Suarez
+                Hello, I&apos;m Eric Suarez 👋
               </h1>
               <p className="text-lg md:text-xl mb-6 opacity-90">
                 Full Stack Developer specializing in modern web technologies.
@@ -42,13 +54,30 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <div className="ms-card max-w-3xl mx-auto">
             <p className="text-lg mb-4">
-              I&apos;m a passionate developer with expertise in TypeScript, React, Next.js, and modern web technologies. 
-              I enjoy creating clean, efficient, and user-friendly applications that solve real-world problems.
+              Hello! I&apos;m <span className="font-semibold">Eric Suarez</span>, a
+              full-stack software engineer. By day, I&apos;m fortunate to work at{" "}
+              <span className="not-prose">
+                <Badge href="https://microsoft.com">
+                  <Image
+                    alt="Microsoft logomark"
+                    src="/microsoft-logo.png"
+                    className="!mr-1"
+                    width="14"
+                    height="14"
+                  />
+                  Microsoft
+                </Badge>
+              </span>{" "}
+              , where I get to come up with solutions to interesting business problems
+              through code.
             </p>
             <p className="text-lg">
               With a strong foundation in both frontend and backend development, I bring ideas to life with 
-              attention to detail, performance, and accessibility. I&apos;m always learning and exploring new technologies 
-              to stay at the cutting edge of web development.
+              attention to detail, performance, and accessibility. I enjoy learning new things.
+              Whether it&apos;s mastering the latest JavaScript framework or exploring
+              design principles, I&apos;m always hungry for knowledge and love to share
+              cool things I learn with others. I believe that sharing knowledge not
+              only enriches our community but also helps us grow collectively.
             </p>
           </div>
         </div>
@@ -66,11 +95,11 @@ export default function Home() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  React & React Native
+                  React
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Next.js
+                  Angular
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
@@ -78,11 +107,11 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Tailwind CSS
+                  HTML5/CSS3
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  HTML5/CSS3
+                  Sass/SCSS
                 </li>
               </ul>
             </div>
@@ -92,11 +121,11 @@ export default function Home() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Node.js
+                  C#
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Express
+                  .NET
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
@@ -122,11 +151,15 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
+                  Azure
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
                   CI/CD Pipelines
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Testing (Jest, React Testing Library)
+                  Testing (Jest, React Testing Library, Microsoft Playwright)
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
@@ -151,11 +184,11 @@ export default function Home() {
           <div className="space-y-8">
             <div className="ms-card relative border-l-4 border-l-[var(--primary)]">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Senior Developer</h3>
+                <h3 className="text-xl font-semibold">Senior Software Engineer</h3>
                 <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>Company Name</span>
+                  <span>Microsoft</span>
                   <span>•</span>
-                  <span>2021 - Present</span>
+                  <span>2019 - Present</span>
                 </div>
               </div>
               <p className="mb-4">
