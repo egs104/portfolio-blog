@@ -71,9 +71,13 @@ export default function Counter() {
   }
 };
 
+// Define the valid keys type
+type BlogPostKey = keyof typeof blogPosts;
+
 // Dynamic metadata generation
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug];
+  // Apply type assertion for slug
+  const post = blogPosts[params.slug as BlogPostKey];
   
   if (!post) {
     return {
@@ -88,7 +92,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = blogPosts[params.slug];
+  // Apply type assertion for slug
+  const post = blogPosts[params.slug as BlogPostKey];
   
   if (!post) {
     notFound();
