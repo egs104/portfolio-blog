@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Hello, I'm Your Eric Suarez
+                Hello, I&apos;m Your Eric Suarez
               </h1>
               <p className="text-lg md:text-xl mb-6 opacity-90">
                 Full Stack Developer specializing in modern web technologies.
@@ -43,12 +42,12 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <div className="ms-card max-w-3xl mx-auto">
             <p className="text-lg mb-4">
-              I'm a passionate developer with expertise in TypeScript, React, Next.js, and modern web technologies. 
+              I&apos;m a passionate developer with expertise in TypeScript, React, Next.js, and modern web technologies. 
               I enjoy creating clean, efficient, and user-friendly applications that solve real-world problems.
             </p>
             <p className="text-lg">
               With a strong foundation in both frontend and backend development, I bring ideas to life with 
-              attention to detail, performance, and accessibility. I'm always learning and exploring new technologies 
+              attention to detail, performance, and accessibility. I&apos;m always learning and exploring new technologies 
               to stay at the cutting edge of web development.
             </p>
           </div>
@@ -278,7 +277,7 @@ export default function Home() {
       <section id="contact" className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Get In Touch</h2>
-          <p className="text-center text-[var(--muted-foreground)] mb-12">Let's discuss your project</p>
+          <p className="text-center text-[var(--muted-foreground)] mb-12">Let&apos;s discuss your project</p>
           
           <div className="ms-card max-w-2xl mx-auto">
             <form className="space-y-6">
