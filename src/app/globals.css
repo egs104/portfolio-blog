@@ -1,24 +1,66 @@
 @import "tailwindcss";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @theme {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafafa;
+  --foreground: #242424;
+  --primary: #0078d4;
+  --primary-hover: #106ebe;
+  --secondary: #2b88d8;
+  --accent: #ffaa44;
+  --card-bg: #ffffff;
+  --muted: #f3f3f3;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1f1f1f;
+    --foreground: #f5f5f5;
+    --primary: #0078d4;
+    --primary-hover: #2b88d8;
+    --secondary: #4894db;
+    --accent: #ffaa44; 
+    --card-bg: #2d2d2d;
+    --muted: #313131;
+    --muted-foreground: #a0a0a0;
+    --border: #404040;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer components {
+  .ms-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .ms-button {
+    @apply px-4 py-2 rounded-sm bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-medium transition-colors;
+  }
+  
+  .ms-section {
+    @apply py-12 md:py-16;
+  }
+  
+  .ms-card {
+    @apply bg-[var(--card-bg)] p-6 rounded-lg shadow-sm border border-[var(--border)];
+  }
+
+  .ms-heading {
+    @apply font-semibold leading-tight;
+  }
 }
