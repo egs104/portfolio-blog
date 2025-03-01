@@ -74,18 +74,9 @@ export default function Counter() {
 // Define the valid keys type
 type BlogPostKey = keyof typeof blogPosts;
 
-// Define the params type
-type BlogPostParams = {
-  params: {
-    slug: string;
-  };
-};
-
 // Dynamic metadata generation
-export async function generateMetadata({ params }: BlogPostParams) {
-  // Apply type assertion for slug
-  const blogPostParams = await params;
-  const post = blogPosts[blogPostParams.slug as BlogPostKey];
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = blogPosts[params.slug as BlogPostKey];
   
   if (!post) {
     return {
@@ -99,10 +90,8 @@ export async function generateMetadata({ params }: BlogPostParams) {
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostParams) {
-  // Apply type assertion for slug
-  const blogPostParams = await params;
-  const post = blogPosts[blogPostParams.slug as BlogPostKey];
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = blogPosts[params.slug as BlogPostKey];
   
   if (!post) {
     notFound();
