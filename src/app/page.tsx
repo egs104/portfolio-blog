@@ -7,7 +7,7 @@ function Badge(props: any) {
     <a
       {...props}
       target="_blank"
-      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-4 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
+      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
     />
   );
 }
@@ -159,7 +159,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Testing (Jest, React Testing Library, Microsoft Playwright)
+                  Testing (Jest, React Testing Library, Microsoft Playwright, xUnit)
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
