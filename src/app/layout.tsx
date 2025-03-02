@@ -25,7 +25,7 @@ export default function RootLayout({
           <header className="border-b border-[var(--border)] bg-[var(--card-bg)] sticky top-0 z-10">
             <div className="ms-container flex items-center justify-between h-16">
               <Link href="/" className="text-xl font-semibold text-[var(--primary)]">
-                Your Name
+                EgsTech
               </Link>
               <div className="flex items-center">
                 <nav className="mr-4">
@@ -50,7 +50,7 @@ export default function RootLayout({
             <div className="ms-container py-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                  <h3 className="font-semibold mb-4">Your Name</h3>
+                  <h3 className="font-semibold mb-4">Eric Suarez</h3>
                   <p className="text-[var(--muted-foreground)]">Professional developer building modern web experiences.</p>
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="mt-8 pt-8 border-t border-[var(--border)] text-center text-[var(--muted-foreground)]">
-                <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Eric Suarez. All rights reserved.</p>
               </div>
             </div>
           </footer>

@@ -186,7 +186,18 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold">Senior Software Engineer</h3>
                 <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>Microsoft</span>
+                  <span>
+                    <Badge href="https://microsoft.com">
+                      <Image
+                        alt="Microsoft logomark"
+                        src="/microsoft-logo.png"
+                        className="!mr-1"
+                        width="14"
+                        height="14"
+                      />
+                      Microsoft
+                    </Badge>
+                  </span>
                   <span>•</span>
                   <span>2019 - Present</span>
                 </div>
@@ -206,9 +217,20 @@ export default function Home() {
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold">Web Developer</h3>
                 <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>Previous Company</span>
+                <span>
+                    <Badge href="https://americanexpress.com">
+                      <Image
+                        alt="American Express logomark"
+                        src="/amex-logo.png"
+                        className="!mr-1"
+                        width="14"
+                        height="14"
+                      />
+                      American Express
+                    </Badge>
+                  </span>
                   <span>•</span>
-                  <span>2018 - 2021</span>
+                  <span>2017 - 2019</span>
                 </div>
               </div>
               <p className="mb-4">
@@ -234,20 +256,44 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="ms-card">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Master of Computer Science</h3>
-                <span className="text-[var(--muted-foreground)]">2018</span>
+                <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
+                <span className="text-[var(--muted-foreground)]">2017</span>
               </div>
-              <p className="text-[var(--primary)] font-medium mb-2">University Name</p>
-              <p>Specialized in Software Engineering with focus on web technologies and distributed systems.</p>
+              <p className="text-[var(--primary)] font-medium mb-2"><Badge href="https://ufl.edu">
+                      <Image
+                        alt="University of Florida logomark"
+                        src="/uf-logo.png"
+                        className="!mr-1"
+                        width="14"
+                        height="14"
+                      />
+                      University of Florida
+                    </Badge></p>
+              <p>Core computer science fundamentals with minor in business administration.</p>
             </div>
             
             <div className="ms-card">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
-                <span className="text-[var(--muted-foreground)]">2016</span>
+                <h3 className="text-xl font-semibold">iOS Development Bootcamp</h3>
+                <span className="text-[var(--muted-foreground)]">January 2016 – May 2016</span>
               </div>
-              <p className="text-[var(--primary)] font-medium mb-2">University Name</p>
-              <p>Core computer science fundamentals with minor in UI/UX Design.</p>
+              <p className="text-[var(--primary)] font-medium mb-2">
+                <Badge href="https://codepath.org">
+                  <Image
+                    alt="CodePath logomark"
+                    src="/codepath-logo.png"
+                    className="!mr-1"
+                    width="14"
+                    height="14"
+                  />
+                  CodePath University
+                </Badge>
+              </p>
+              <p>
+                Completed a 12 week iOS bootcamp (using Swift) offered by CodePath where students met for two hour in-person
+                classes twice a week and completed one project per week (5-10 hours of development time). Created a sneaker community and valuation app called KickSwap along with 2 other students in the final 6 weeks of
+                the program.
+              </p>
             </div>
           </div>
         </div>
