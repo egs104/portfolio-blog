@@ -45,8 +45,14 @@ export default function Home() {
               <div className="w-64 h-64 relative">
                 <div className="absolute inset-0 bg-white rounded-full opacity-20"></div>
                 <div className="absolute inset-4 bg-white rounded-full opacity-30"></div>
-                <div className="absolute inset-8 bg-white rounded-full opacity-50 flex items-center justify-center text-6xl">
-                  EGS {/* Placeholder for profile image or initials */}
+                <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center text-6xl p-1">
+                  <Image
+                    alt="Profile picture"
+                    src="/profile-pic.jpg"
+                    className="rounded-full object-cover w-full h-full"
+                    width="192"
+                    height="192"
+                  />
                 </div>
               </div>
             </div>
@@ -210,7 +216,7 @@ export default function Home() {
                     </Badge>
                   </span>
                   <span>•</span>
-                  <span>2019 - Present</span>
+                  <span>Sep 2019 - Present</span>
                 </div>
               </div>
               <p className="mb-4">
@@ -227,7 +233,7 @@ export default function Home() {
 
             <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Web Developer</h3>
+                <h3 className="text-xl font-semibold">Software Engineer</h3>
                 <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
                   <span>
                     <Badge href="https://americanexpress.com">
@@ -242,18 +248,32 @@ export default function Home() {
                     </Badge>
                   </span>
                   <span>•</span>
-                  <span>2017 - 2019</span>
+                  <span>Jan 2018 - Aug 2019</span>
                 </div>
               </div>
               <p className="mb-4">
-                Developed and maintained multiple client websites using React and Node.js.
-                Collaborated with design team to implement pixel-perfect UIs and modern user
-                experiences.
+                As a part of the Global Risk Technology team, I helped deliver the Norwegian SAS
+                Co-Brand Consumer Card by creating a REST API used to get applicant data to make
+                Risk decisions on prospective customers.
               </p>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-1">
-                <li>Built responsive web applications</li>
-                <li>Integrated third-party APIs</li>
-                <li>Optimized site performance</li>
+                <li>
+                  I optimized and uplifted our database access component to use a new internal
+                  Database API which helped lower our platforms database operations by 50% which
+                  contributed to meeting SLA for the Norwegian SAS Co-Brand Consumer card products
+                  and Amazon Co-Brand Business cards.
+                </li>
+                <li>
+                  To aid our campus recruitment team, I along with some of my peers were asked to
+                  uplift our Candidate Intake Portal which was used most recently at the 2019 NSBE
+                  conference.
+                </li>
+                <li>Leading enhancement to our team&apos;s CI/CD pipeline.</li>
+                <li>
+                  My team received 1st place in the company wide new hire hackathon by delivering an
+                  app that visually displayed and monitored payment information in real time using
+                  graphs, charts and heat maps.
+                </li>
               </ul>
             </div>
           </div>
