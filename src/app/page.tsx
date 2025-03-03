@@ -48,7 +48,7 @@ export default function Home() {
                 <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center text-6xl p-1">
                   <Image
                     alt="Profile picture"
-                    src="/profile-pic.jpg"
+                    src="/profile-pic.JPG"
                     className="rounded-full object-cover w-full h-full"
                     width="192"
                     height="192"
