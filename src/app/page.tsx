@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SkillsSection from "./components/SkillsSection";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Badge(props: any) {
@@ -105,86 +106,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="ms-card">
               <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">Frontend</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  React
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Angular
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  TypeScript
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  HTML5/CSS3
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Sass/SCSS
-                </li>
-              </ul>
+              <SkillsSection category="frontend" />
             </div>
 
             <div className="ms-card">
               <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">Backend</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  C#
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  .NET
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  SQL & NoSQL Databases
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  REST & GraphQL APIs
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Authentication & Authorization
-                </li>
-              </ul>
+              <SkillsSection category="backend" />
             </div>
 
             <div className="ms-card">
               <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">
                 Tools & Practices
               </h3>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Git & GitHub
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Azure
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  CI/CD Pipelines
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Testing (Jest, React Testing Library, Microsoft Playwright, xUnit)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  Agile Methodologies
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"></span>
-                  UI/UX Design Principles
-                </li>
-              </ul>
+              <SkillsSection category="tools" />
             </div>
           </div>
         </div>
