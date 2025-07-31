@@ -154,14 +154,64 @@ export default function Home() {
                 </div>
               </div>
               <p className="mb-4">
-                Led the development of multiple web applications using React, Next.js, and
-                TypeScript. Implemented modern UI components and responsive designs that improved
-                user engagement by 35%.
+                As a Senior Software Engineer at{" "}
+                <Badge href="https://microsoft.com">
+                  <Image
+                    alt="Microsoft logomark"
+                    src="/microsoft-logo.png"
+                    className="!mr-1"
+                    width="14"
+                    height="14"
+                  />
+                  Microsoft
+                </Badge>
+                , I delivered impactful solutions across Project Management, Risk Management,
+                Approval Management, and CPQ (Configure, Price, Quote) platforms. Key
+                accomplishments include:
               </p>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-1">
-                <li>Architected scalable frontend solutions</li>
-                <li>Mentored junior developers</li>
-                <li>Implemented CI/CD pipelines</li>
+                <li>
+                  Developed bulk internal engagement upload and validation, reducing processing time
+                  from 12-24 hours to minutes, and enhanced business domain skill validations for
+                  bulk and single engagement creation.
+                </li>
+                <li>
+                  Engineered FCR (Financial Change Request) automations and UI enhancements adhering
+                  to SDM+ rules, including dynamic approvers, blended cost rate calculations, and
+                  auto-population of labor, unit, subcontractor, and expense data.
+                </li>
+                <li>
+                  Integrated Azure services (Functions, Service Bus, Queues) to automate event
+                  processing, improve reliability, and eliminate recurring user-impacting issues.
+                </li>
+                <li>
+                  Expanded machine learning-driven forecasting, integrating business insights APIs
+                  to provide project managers with actionable recommendations, reducing manual
+                  effort and improving forecast accuracy.
+                </li>
+                <li>
+                  Developed and enhanced reporting features (Cost & Bill Rates, Financial Analysis)
+                  and integrated resource calendar APIs to provide project managers with real-time
+                  insights for planning and analysis.
+                </li>
+                <li>
+                  Led the transition and knowledge transfer of Project Management applications to
+                  new teams, ensuring seamless business continuity and successful global launches.
+                </li>
+                <li>
+                  Contributed to the design and implementation of mobile and Microsoft Teams
+                  experiences for project management, leveraging React Native and FxP Mobile
+                  Platform.
+                </li>
+                <li>
+                  Enabled robust, reusable risk UI components and APIs for the Common Risk Service
+                  and Contract Lifecycle Management, and set up automated unit and integration
+                  testing (including Playwright) to ensure high code quality and reliability.
+                </li>
+                <li>
+                  Created automated release pipelines and improved UI performance, empowering teams
+                  to deliver features faster and with higher confidence.
+                </li>
               </ul>
             </div>
 
@@ -209,6 +259,39 @@ export default function Home() {
                   graphs, charts and heat maps.
                 </li>
               </ul>
+            </div>
+            <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
+              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
+                <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
+                  <span>
+                    <Badge href="https://americanexpress.com">
+                      <Image
+                        alt="American Express logomark"
+                        src="/amex-logo.png"
+                        className="!mr-1"
+                        width="14"
+                        height="14"
+                      />
+                      American Express
+                    </Badge>
+                  </span>
+                  <span>•</span>
+                  <span>Jun 2016 - Aug 2016</span>
+                </div>
+              </div>
+              <p className="mb-4">
+                As a part of the Global Credit Bureau Solutions team, I assisted in the uplift of
+                their web application (C#, .NET, SQL) by optimizing the existing code, improving the
+                user interface, and aligning the code base to AMEX Reference Architecture standards
+                by implementing and creating a 3 layer architecture (Data, Business, Presentation)
+                for the application.
+              </p>
+              <p className="mb-4">
+                During the final 2 weeks of the internship, I, along with the other interns created
+                a web application to enhance the // campus recruitment process using SQLite,
+                Express, Angular, and Node which was served from a Raspberry Pi 3.
+              </p>
             </div>
           </div>
         </div>
@@ -270,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="ms-section">
+      {/* <section className="ms-section">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">Some of my recent work</p>
@@ -336,7 +419,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="ms-section bg-[var(--muted)]">
