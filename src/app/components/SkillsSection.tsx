@@ -18,7 +18,18 @@ const SkillsSection: React.FC<SkillsSectionProps> = ({ category }) => {
       "Next.js",
     ],
     backend: ["C#", ".NET", "SQL", "NoSQL", "Redis", "REST APIs", "GraphQL", "Authentication"],
-    tools: ["Git & GitHub", "Azure", "CI/CD", "Jest", "Playwright", "Figma", "Docker", "Agile"],
+    tools: [
+      "Git & GitHub",
+      "Azure",
+      "Azure OpenAI",
+      "MCP Server & Tools",
+      "CI/CD",
+      "Jest",
+      "Playwright",
+      "Figma",
+      "Docker",
+      "Agile",
+    ],
   };
 
   // Select skills based on the provided category or use all skills if no category provided

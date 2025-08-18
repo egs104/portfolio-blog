@@ -86,7 +86,9 @@ export default function Home() {
             <p className="text-lg">
               With a strong foundation in both frontend and backend development, I bring ideas to
               life with attention to detail, performance, and accessibility. I enjoy learning new
-              things. Whether it&apos;s mastering the latest JavaScript framework or exploring
+              things — currently embracing AI and exploring how it can improve software engineering
+              processes and products, from automating routine work to delivering smarter user
+              experiences. Whether it&apos;s mastering the latest JavaScript framework or exploring
               design principles, I&apos;m always hungry for knowledge and love to share cool things
               I learn with others. I believe that sharing knowledge not only enriches our community
               but also helps us grow collectively.
@@ -171,14 +173,26 @@ export default function Home() {
               </p>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-1">
                 <li>
+                  Building an MCP server with OAuth (C# .NET) deployed to Azure App Service and
+                  Container Apps to expose agent-backed tools for viewing and taking actions on
+                  approvals via an agent created in Microsoft Copilot Studio.
+                </li>
+                <li>
+                  Developing an AI-driven approval summary feature (C# .NET + Azure OpenAI) that
+                  generates context-aware, decision-ready summaries for in-app UI and notification
+                  emails — enabling approvers to make faster, more confident decisions without
+                  switching between multiple tools while providing a consistent, leadership-
+                  approved analysis.
+                </li>
+                <li>
                   Developed bulk internal engagement upload and validation, reducing processing time
                   from 12-24 hours to minutes, and enhanced business domain skill validations for
                   bulk and single engagement creation.
                 </li>
                 <li>
                   Engineered FCR (Financial Change Request) automations and UI enhancements adhering
-                  to SDM+ rules, including dynamic approvers, blended cost rate calculations, and
-                  auto-population of labor, unit, subcontractor, and expense data.
+                  to business rules, including dynamic approvers, blended cost rate calculations,
+                  and auto-population of labor, unit, subcontractor, and expense data.
                 </li>
                 <li>
                   Integrated Azure services (Functions, Service Bus, Queues) to automate event
