@@ -159,63 +159,67 @@ export default function Home() {
               {/* Role Summary */}
               <p className="mb-2">
                 Senior Software Engineer building AI-powered features, cloud-native platforms, and
-                scalable enterprise applications across Approvals, Project Management, Risk
-                Management, and CPQ (Configure, Price, Quote) domains. Driving end-to-end
-                delivery&mdash;from GPT-integrated AI summaries and agentic Model Context Protocol
-                (MCP) tooling to event-driven Azure services, Infrastructure as Code, and production
-                reliability&mdash;with a focus on measurable customer impact and engineering
-                excellence.
+                scalable enterprise applications across Project Management, Risk Management,
+                Approval Management, CPQ (Configure, Price, Quote), and Customer Success Agent
+                platforms. Driving end-to-end delivery&mdash;from LLM-integrated AI summaries and
+                agentic Model Context Protocol (MCP) tooling to performant APIs, event-driven Azure
+                services, Infrastructure as Code, and production reliability&mdash;with a focus on
+                measurable customer impact and engineering excellence.
               </p>
 
               {/* Selected Impact */}
-              <h4 className="text-lg font-semibold mt-6 mb-3">Selected Impact</h4>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2">
                 <li>
-                  Shipped an AI-generated &ldquo;Approval Summary&rdquo; feature using GPT
-                  integration with prompt optimization, clearing Privacy and Responsible AI (OneRAI)
-                  compliance gates through cross-functional collaboration&mdash;enabling approvers
-                  to make faster, evidence-based decisions. Fixed a Sev&nbsp;2 accessibility bug in
-                  the shared UI feedback component used for AI summary feedback collection.
+                  Owned and delivered an end-to-end AI-generated summary feature: built a backend
+                  streaming API integrated with OpenAI model, designed a configurable prompt
+                  provider using RAG to pull relevant context for LLM analysis, and developed a
+                  frontend experience that consumes the streaming response to deliver a real-time,
+                  chat-like UX&mdash;enabling users to make faster, evidence-based decisions.
                 </li>
                 <li>
-                  Built Model Context Protocol (MCP) tools that surface approval data by
-                  contract/quote and user-specific &ldquo;My Approvals&rdquo; into the Services Deal
-                  Copilot AI assistant, extending agentic workflows beyond traditional UI.
+                  Built Model Context Protocol (MCP) tools that surface domain-specific data into an
+                  enterprise AI assistant, extending agentic workflows beyond traditional UI
+                  boundaries.
                 </li>
                 <li>
-                  Architected an L0 orchestrator agent for the Customer Success Agent platform,
-                  connecting multiple L1 agents for modular, scalable AI-driven workflows; enabled
-                  13 Copilot Studio agents to connect on schedule through migration planning,
-                  cross-team execution, and office hours support.
+                  Architected a top-level orchestrator agent connecting multiple specialized
+                  sub-agents for modular, scalable AI-driven workflows; led migration planning and
+                  cross-team execution to onboard 16 AI agents on schedule.nAutomated CI/CD
+                  pipelines for AI agent deployments with environment variable handling across
+                  environments; navigated security and privacy compliance gates for AI-powered
+                  features.
                 </li>
                 <li>
-                  Automated solution export/import pipelines in Azure DevOps with environment
-                  variable handling for AI models; cleared security, privacy, and DLP compliance
-                  gates for Copilot Studio agent features.
+                  Drove cloud cost governance&mdash;instituted monthly spend reviews, improved
+                  budget adherence, and delivered $11.6K/year in savings with measurable carbon
+                  footprint reduction through resource optimization.
                 </li>
                 <li>
-                  Drove Azure spend governance as Azure Champ&mdash;instituted monthly spend review
-                  meetings, improved budget adherence, and delivered $11.6K/year savings with ~503
-                  kg&nbsp;CO₂e reduction for the Pursuit Management service through efficiency
-                  recommendations.
+                  Stabilized production deployments by resolving pipeline dependency drift;
+                  implemented audit logging and monitoring dashboards for compliance and
+                  observability.
                 </li>
                 <li>
-                  Stabilized production deployments by fixing UI pipeline dependency drift (honoring
-                  lockfiles); supported vendors with Geneva KPI monitoring setup and implemented
-                  audit logging for compliance (S360) and observability.
+                  Project Management: Scaled ML-driven forecast recommendations from a pilot of ~30
+                  users to over 650 in order to provide project managers with actionable
+                  recommendations, reducing manual effort and improving forecast accuracy; built
+                  data reconciliation and event-processing modules; integrated serverless functions
+                  and message queue triggers for reliable, event-driven processing. Reduced bulk
+                  upload workflows from 12&ndash;24 hours to minutes through validation and creation
+                  automation; contributed to the design and implementation of mobile and Microsoft
+                  Teams experiences for project management, leveraging React Native.
                 </li>
                 <li>
-                  Expanded ML-driven forecast recommendations from a pilot of ~30 users to over 650;
-                  built data reconciliation and event-processing modules; integrated Azure
-                  Functions, Service Bus, and Queue triggers for reliable, event-driven processing.
-                  Reduced bulk upload workflows from 12&ndash;24 hours to minutes through validation
-                  automation.
+                  Enabled robust, reusable risk UI components (npm package library) and APIs for the
+                  Common Risk Service, Configure Price Quote (CPQ) Tool, and Contract Lifecycle
+                  Management, and set up automated unit and integration testing (including
+                  Playwright) to ensure high code quality and reliability.
                 </li>
                 <li>
-                  Increased test coverage (60%&nbsp;&rarr;&nbsp;74%); led Playwright
-                  proof-of-concept and integration/API testing; adopted Bicep Infrastructure as
-                  Code; established quality gates, telemetry dashboards, and SLA performance targets
-                  (&le;2s&nbsp;API&nbsp;p95, &lt;5s&nbsp;UI&nbsp;p95).
+                  Increased test coverage (60%&nbsp;&rarr;&nbsp;81%); led Playwright
+                  proof-of-concept and integration/API testing; adopted Infrastructure as Code;
+                  established telemetry dashboards to monitor quality gates and SLA performance
+                  targets (&le;2s&nbsp;API&nbsp;p95, &lt;5s&nbsp;UI&nbsp;p95).
                 </li>
               </ul>
 
@@ -227,10 +231,10 @@ export default function Home() {
                   <div className="flex flex-wrap gap-1.5">
                     {[
                       "MCP",
-                      "GPT Integration",
-                      "Prompt Optimization",
-                      "Responsible AI (OneRAI)",
-                      "Copilot Studio",
+                      "LLM Integration",
+                      "Prompt Engineering",
+                      "Responsible AI",
+                      "AI Agent Platforms",
                     ].map(skill => (
                       <span
                         key={skill}
@@ -245,10 +249,10 @@ export default function Home() {
                   <p className="text-sm font-medium mb-2 text-[var(--primary)]">Cloud / Platform</p>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-                      "Azure Functions",
-                      "Service Bus / Queue Triggers",
-                      "Azure Container Apps",
-                      "Azure App Service",
+                      "Serverless Functions",
+                      "Message Queues / Event-Driven",
+                      "Container Orchestration",
+                      "Cloud PaaS",
                     ].map(skill => (
                       <span
                         key={skill}
@@ -263,10 +267,10 @@ export default function Home() {
                   <p className="text-sm font-medium mb-2 text-[var(--primary)]">DevOps / IaC</p>
                   <div className="flex flex-wrap gap-1.5">
                     {[
-                      "Azure DevOps Pipelines",
+                      "CI/CD Pipelines",
                       "YAML",
-                      "Bicep",
-                      "CI/CD",
+                      "Infrastructure as Code",
+                      "GitOps",
                       "Zero-downtime Deployments",
                     ].map(skill => (
                       <span
@@ -289,7 +293,7 @@ export default function Home() {
                       "Coverage Gates",
                       "Telemetry Dashboards",
                       "Accessibility",
-                      "Geneva KPI Monitoring",
+                      "Application Monitoring",
                     ].map(skill => (
                       <span
                         key={skill}
@@ -307,24 +311,24 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {[
                   {
-                    title: "Approval Summary (AI)",
-                    desc: "GPT-powered summaries with Responsible AI compliance gates",
+                    title: "AI-Powered Summaries",
+                    desc: "LLM-integrated summaries with responsible AI compliance",
                   },
                   {
-                    title: "MCP Tools for Services Deal Copilot",
-                    desc: "Agentic tools surfacing approval data via AI assistant",
+                    title: "MCP Agentic Tools",
+                    desc: "Agentic tools surfacing domain data via enterprise AI assistant",
                   },
                   {
-                    title: "Customer Success Agent Orchestrator",
-                    desc: "L0/L1 agent architecture for modular AI workflows",
+                    title: "Multi-Agent Orchestrator",
+                    desc: "Top-level orchestrator connecting specialized sub-agents at scale",
                   },
                   {
-                    title: "Event-driven Approvals Processing",
-                    desc: "Azure Functions, Service Bus, and Queue triggers",
+                    title: "Event-Driven Processing Platform",
+                    desc: "Serverless functions, message queues, and queue triggers",
                   },
                   {
                     title: "IaC + CI/CD for Production Readiness",
-                    desc: "Bicep, YAML pipelines, quality gates, and telemetry",
+                    desc: "Infrastructure as Code, YAML pipelines, quality gates, and telemetry",
                   },
                 ].map(project => (
                   <div
@@ -336,11 +340,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-
-              {/* Credibility Line */}
-              <p className="text-xs text-[var(--muted-foreground)] mt-6 italic">
-                Highlights sourced from Microsoft Connect performance reflections (2019&ndash;2025).
-              </p>
             </div>
 
             <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
