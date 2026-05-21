@@ -1,38 +1,78 @@
 import React from "react";
 
+type SkillCategory =
+  | "languages"
+  | "backend"
+  | "frontend"
+  | "cloud"
+  | "ai"
+  | "quality"
+  | "leadership";
+
 interface SkillsSectionProps {
-  category?: "frontend" | "backend" | "tools";
+  category?: SkillCategory;
 }
 
-const SkillsSection: React.FC<SkillsSectionProps> = ({ category }) => {
-  // Define skills by category
-  const skillsByCategory = {
-    frontend: [
-      "React",
-      "Angular",
-      "TypeScript",
-      "HTML5/CSS3",
-      "Sass/SCSS",
-      "Vite",
-      "Webpack",
-      "Next.js",
-    ],
-    backend: ["C#", ".NET", "SQL", "NoSQL", "Redis", "REST APIs", "GraphQL", "Authentication"],
-    tools: [
-      "Git & GitHub",
-      "Azure",
-      "Azure OpenAI",
-      "MCP Server & Tools",
-      "CI/CD",
-      "Jest",
-      "Playwright",
-      "Figma",
-      "Docker",
-      "Agile",
-    ],
-  };
+const skillsByCategory: Record<SkillCategory, string[]> = {
+  languages: ["C#", ".NET", "TypeScript", "JavaScript", "React", "SQL", "Java"],
+  backend: [
+    "REST APIs",
+    "GraphQL",
+    "JWT Bearer Auth",
+    "Distributed Services",
+    "Service Integration",
+    "Caching Strategies",
+    "Performance Optimization",
+  ],
+  frontend: [
+    "React",
+    "TypeScript",
+    "npm Component Libraries",
+    "Accessibility",
+    "Frontend Observability",
+    "Playwright",
+    "UI Integration Testing",
+  ],
+  cloud: [
+    "Azure",
+    "Azure Container Apps",
+    "AKS",
+    "Azure DevOps",
+    "CI/CD",
+    "Automated Release Gates",
+    "Zero-Downtime Deployments",
+    "Infrastructure as Code",
+  ],
+  ai: [
+    "MCP",
+    "Agent Orchestration",
+    "AI-Generated Summaries",
+    "LLM-Integrated Workflows",
+    "Responsible AI",
+    "Enterprise AI Assistants",
+    "Azure OpenAI",
+  ],
+  quality: [
+    "Observability",
+    "Logging & Telemetry",
+    "Automated Alerts",
+    "SRE Practices",
+    "Unit Testing",
+    "Integration Testing",
+    "Accessibility Testing",
+  ],
+  leadership: [
+    "Technical Design Docs",
+    "Architecture Reviews",
+    "Partner Team Onboarding",
+    "API Contract Alignment",
+    "Mentoring Engineers",
+    "Production Readiness",
+    "Cost Governance",
+  ],
+};
 
-  // Select skills based on the provided category or use all skills if no category provided
+const SkillsSection: React.FC<SkillsSectionProps> = ({ category }) => {
   const skills = category
     ? skillsByCategory[category]
     : ([] as string[]).concat(...Object.values(skillsByCategory));

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ImpactCard from "./components/ImpactCard";
 import SkillsSection from "./components/SkillsSection";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,27 +13,118 @@ function Badge(props: any) {
   );
 }
 
+const impactItems = [
+  {
+    icon: "🤖",
+    title: "AI Approval Summary",
+    metric: "~6.5K/mo",
+    metricLabel: "uses",
+    description:
+      "Delivered an AI-generated summary experience integrated into enterprise approval workflows, driving ~6.5K monthly uses and helping users review and act on requests in an average of ~146 seconds per decision.",
+  },
+  {
+    icon: "🔗",
+    title: "Shared Service & Agent Platform",
+    metric: "13+",
+    metricLabel: "services",
+    description:
+      "Scaled a shared service and agent platform used by 13+ downstream services, enabling consistent integration, deployment, and release coordination across teams.",
+  },
+  {
+    icon: "📡",
+    title: "Production Reliability",
+    metric: "~90%",
+    metricLabel: "triage reduction",
+    description:
+      "Reduced incident triage time by ~90%, from ~30–40 minutes to ~2–3 minutes, by improving logging, telemetry, and diagnostic workflows.",
+  },
+  {
+    icon: "☁️",
+    title: "Azure Cost Optimization",
+    metric: "$284.8K",
+    metricLabel: "savings",
+    description:
+      "Drove Azure spend governance across multiple services, delivering ~$284.8K in savings and keeping spend ~11.8% under a ~$2.41M budget.",
+  },
+  {
+    icon: "🚀",
+    title: "AKS to Azure Container Apps Migration",
+    metric: "4 teams",
+    metricLabel: "migrated",
+    description:
+      "Migrated microservices from AKS to Azure Container Apps, reducing infrastructure overhead across 4 service teams, lowering costs by ~4%, and improving zero-downtime deployment reliability.",
+  },
+  {
+    icon: "🧩",
+    title: "Shared React/npm Component Library",
+    metric: "4–5 teams",
+    metricLabel: "adopted",
+    description:
+      "Built reusable React/npm component libraries adopted by 4–5 engineering teams, standardizing accessibility, performance, observability, and UI implementation patterns.",
+  },
+  {
+    icon: "⚡",
+    title: "Platform Scale & Performance",
+    metric: "~10K",
+    metricLabel: "target users",
+    description:
+      "Built platform foundations designed to scale toward a ~10K-user Customer Success organization, with API services achieving <2s p95 latency and frontend applications loading in <5s.",
+  },
+];
+
+const skillCategories: Array<{
+  id: "languages" | "backend" | "frontend" | "cloud" | "ai" | "quality" | "leadership";
+  label: string;
+}> = [
+  { id: "languages", label: "Languages & Frameworks" },
+  { id: "backend", label: "Backend & APIs" },
+  { id: "frontend", label: "Frontend" },
+  { id: "cloud", label: "Cloud & Platform" },
+  { id: "ai", label: "AI & Agentic Systems" },
+  { id: "quality", label: "Quality & Reliability" },
+  { id: "leadership", label: "Leadership" },
+];
+
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
+      {/* ── Hero ─────────────────────────────────────────── */}
       <section className="ms-section bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white">
         <div className="ms-container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Hello, I&apos;m Eric Suarez 👋
-              </h1>
-              <p className="text-lg md:text-xl mb-6 opacity-90">
-                Full Stack Developer specializing in modern web technologies.
+              <p className="text-sm font-medium uppercase tracking-widest opacity-80 mb-2">
+                Microsoft · Senior Software Engineer
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/blog"
-                  className="ms-button bg-white text-[var(--primary)] hover:bg-opacity-90"
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                Eric Suarez
+              </h1>
+              <p className="text-xl md:text-2xl font-medium mb-4 opacity-95">
+                Senior Full-Stack Software Engineer building AI-powered enterprise platforms.
+              </p>
+              <p className="text-base md:text-lg mb-8 opacity-85 leading-relaxed max-w-prose">
+                8+ years of experience building scalable backend services, performant
+                React/TypeScript applications, agentic workflows, and Azure cloud platforms. I work
+                across the stack — from secure REST/GraphQL APIs and distributed services to
+                accessible frontend experiences, observability, CI/CD, and production-ready AI
+                systems.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {/* TODO: replace href with /Eric_Suarez_Senior_Software_Engineer_Resume.pdf when ready */}
+                <a
+                  href="https://www.linkedin.com/in/TODO"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ms-button bg-white text-[var(--primary)] hover:bg-opacity-90 font-semibold"
                 >
-                  Read My Blog
-                </Link>
+                  View LinkedIn / Resume
+                </a>
+                <a
+                  href="#experience"
+                  className="ms-button bg-transparent border border-white hover:bg-white hover:bg-opacity-10"
+                >
+                  View Experience
+                </a>
                 <a
                   href="#contact"
                   className="ms-button bg-transparent border border-white hover:bg-white hover:bg-opacity-10"
@@ -43,16 +134,17 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center">
-              <div className="w-64 h-64 relative">
+              <div className="w-56 h-56 md:w-64 md:h-64 relative">
                 <div className="absolute inset-0 bg-white rounded-full opacity-20"></div>
                 <div className="absolute inset-4 bg-white rounded-full opacity-30"></div>
-                <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center text-6xl p-1">
+                <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center p-1">
                   <Image
-                    alt="Profile picture"
+                    alt="Eric Suarez"
                     src="/profile-pic.JPG"
                     className="rounded-full object-cover w-full h-full"
                     width="192"
                     height="192"
+                    priority
                   />
                 </div>
               </div>
@@ -61,14 +153,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="ms-section">
+      {/* ── About ────────────────────────────────────────── */}
+      <section id="about" className="ms-section">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-          <div className="ms-card max-w-3xl mx-auto">
-            <p className="text-lg mb-4">
-              Hello! I&apos;m <span className="font-semibold">Eric Suarez</span>, a full-stack
-              software engineer. By day, I&apos;m fortunate to work at{" "}
+          <div className="ms-card max-w-3xl mx-auto space-y-4">
+            <p className="text-lg">
+              I&apos;m <span className="font-semibold">Eric Suarez</span>, a Senior Full-Stack
+              Software Engineer at{" "}
               <span className="not-prose">
                 <Badge href="https://microsoft.com">
                   <Image
@@ -80,54 +172,45 @@ export default function Home() {
                   />
                   Microsoft
                 </Badge>
-              </span>{" "}
-              , where I get to come up with solutions to interesting business problems through code.
+              </span>
+              , where I build AI-powered enterprise platforms, shared services, and production-grade
+              full-stack systems that serve thousands of users across multiple engineering teams.
             </p>
             <p className="text-lg">
-              With a strong foundation in both frontend and backend development, I bring ideas to
-              life with attention to detail, performance, and accessibility. I enjoy learning new
-              things — currently embracing AI and exploring how it can improve software engineering
-              processes and products, from automating routine work to delivering smarter user
-              experiences. Whether it&apos;s mastering the latest JavaScript framework or exploring
-              design principles, I&apos;m always hungry for knowledge and love to share cool things
-              I learn with others. I believe that sharing knowledge not only enriches our community
-              but also helps us grow collectively.
+              My work spans agent orchestration and MCP integrations, secure REST and GraphQL APIs,
+              React/TypeScript frontends, Azure cloud infrastructure, and the reliability and
+              observability systems that keep it all running. I take a platform-engineering mindset —
+              building shared foundations that let partner teams ship faster with consistent quality,
+              accessibility, and compliance.
+            </p>
+            <p className="text-lg">
+              I care deeply about measurable impact: reducing incident triage from 30+ minutes to
+              under 3, delivering hundreds of thousands in Azure savings, and shipping AI features
+              that change how people work. I also invest in the people side — mentoring engineers,
+              leading technical design reviews, and aligning partner teams on API contracts and
+              production readiness.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* ── Featured Impact ───────────────────────────────── */}
       <section className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
-          <h2 className="text-3xl font-bold mb-2 text-center">Skills</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center">Featured Impact</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
-            Technologies I work with
+            Selected outcomes from production work
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="ms-card">
-              <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">Frontend</h3>
-              <SkillsSection category="frontend" />
-            </div>
-
-            <div className="ms-card">
-              <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">Backend</h3>
-              <SkillsSection category="backend" />
-            </div>
-
-            <div className="ms-card">
-              <h3 className="text-xl font-semibold mb-4 text-[var(--primary)]">
-                Tools & Practices
-              </h3>
-              <SkillsSection category="tools" />
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {impactItems.map(item => (
+              <ImpactCard key={item.title} {...item} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="ms-section">
+      {/* ── Experience ───────────────────────────────────── */}
+      <section id="experience" className="ms-section">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Work Experience</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
@@ -135,306 +218,272 @@ export default function Home() {
           </p>
 
           <div className="space-y-8">
+            {/* Microsoft — Senior Software Engineer */}
             <div className="ms-card relative border-l-4 border-l-[var(--primary)]">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Senior Software Engineer</h3>
-                <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>
-                    <Badge href="https://microsoft.com">
-                      <Image
-                        alt="Microsoft logomark"
-                        src="/microsoft-logo.png"
-                        className="!mr-1"
-                        width="14"
-                        height="14"
-                      />
-                      Microsoft
-                    </Badge>
-                  </span>
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold">Senior Software Engineer</h3>
+                  <p className="text-sm text-[var(--muted-foreground)] mt-0.5">Redmond, WA</p>
+                </div>
+                <div className="flex items-center gap-2 text-[var(--muted-foreground)] shrink-0">
+                  <Badge href="https://microsoft.com">
+                    <Image
+                      alt="Microsoft logomark"
+                      src="/microsoft-logo.png"
+                      className="!mr-1"
+                      width="14"
+                      height="14"
+                    />
+                    Microsoft
+                  </Badge>
                   <span>•</span>
-                  <span>Sep 2019 - Present</span>
+                  <span className="text-sm">Sep 2024 – Present</span>
                 </div>
               </div>
-
-              {/* Role Summary */}
-              <p className="mb-2">
-                Senior Software Engineer building AI-powered features, cloud-native platforms, and
-                scalable enterprise applications across Project Management, Risk Management,
-                Approval Management, CPQ (Configure, Price, Quote), and Customer Success Agent
-                platforms. Driving end-to-end delivery&mdash;from LLM-integrated AI summaries and
-                agentic Model Context Protocol (MCP) tooling to performant APIs, event-driven Azure
-                services, Infrastructure as Code, and production reliability&mdash;with a focus on
-                measurable customer impact and engineering excellence.
-              </p>
-
-              {/* Selected Impact */}
-              <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2">
+              <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 text-sm leading-relaxed">
                 <li>
-                  Owned and delivered an end-to-end AI-generated summary feature: built a backend
-                  streaming API integrated with OpenAI model, designed a configurable prompt
-                  provider using RAG to pull relevant context for LLM analysis, and developed a
-                  frontend experience that consumes the streaming response to deliver a real-time,
-                  chat-like UX&mdash;enabling users to make faster, evidence-based decisions.
+                  Led development of a unified Customer Success platform, onboarding multiple partner
+                  teams and establishing standardized APIs, integration patterns, and environment
+                  readiness to scale toward a ~10K-user Customer Success organization.
                 </li>
                 <li>
-                  Built Model Context Protocol (MCP) tools that surface domain-specific data into an
-                  enterprise AI assistant, extending agentic workflows beyond traditional UI
-                  boundaries.
+                  Scaled a shared service and agent platform used by 13+ downstream services,
+                  enabling consistent integration, deployment, and release coordination across teams.
                 </li>
                 <li>
-                  Architected a top-level orchestrator agent connecting multiple specialized
-                  sub-agents for modular, scalable AI-driven workflows; led migration planning and
-                  cross-team execution to onboard 16 AI agents on schedule.nAutomated CI/CD
-                  pipelines for AI agent deployments with environment variable handling across
-                  environments; navigated security and privacy compliance gates for AI-powered
-                  features.
+                  Architected an agent orchestration layer routing Customer Success workflows across
+                  multiple domain agents, defining integration contracts, workflow boundaries, and
+                  extension points for scalable enterprise scenarios.
                 </li>
                 <li>
-                  Drove cloud cost governance&mdash;instituted monthly spend reviews, improved
-                  budget adherence, and delivered $11.6K/year in savings with measurable carbon
-                  footprint reduction through resource optimization.
+                  Authored design docs and led technical reviews for AI Workspace integration
+                  patterns, aligning partner teams on API contracts, workflow boundaries, security
+                  requirements, and production readiness criteria.
                 </li>
                 <li>
-                  Stabilized production deployments by resolving pipeline dependency drift;
-                  implemented audit logging and monitoring dashboards for compliance and
-                  observability.
+                  Designed and shipped AI-powered approval workflows, including AI-generated Approval
+                  Summary and MCP integrations, driving ~6.5K monthly uses and enabling users to
+                  review and act on requests in an average of ~146 seconds per decision.
                 </li>
                 <li>
-                  Project Management: Scaled ML-driven forecast recommendations from a pilot of ~30
-                  users to over 650 in order to provide project managers with actionable
-                  recommendations, reducing manual effort and improving forecast accuracy; built
-                  data reconciliation and event-processing modules; integrated serverless functions
-                  and message queue triggers for reliable, event-driven processing. Reduced bulk
-                  upload workflows from 12&ndash;24 hours to minutes through validation and creation
-                  automation; contributed to the design and implementation of mobile and Microsoft
-                  Teams experiences for project management, leveraging React Native.
+                  Reduced incident triage time by ~90% by improving logging, telemetry, and
+                  diagnostic workflows, reducing triage from ~30–40 minutes to ~2–3 minutes during
+                  production issues.
                 </li>
                 <li>
-                  Enabled robust, reusable risk UI components (npm package library) and APIs for the
-                  Common Risk Service, Configure Price Quote (CPQ) Tool, and Contract Lifecycle
-                  Management, and set up automated unit and integration testing (including
-                  Playwright) to ensure high code quality and reliability.
+                  Drove Azure cost optimization across multiple services, delivering ~$284.8K in
+                  savings, keeping spend ~11.8% under a ~$2.41M budget, and establishing governance
+                  practices to maintain consistent budget adherence.
                 </li>
                 <li>
-                  Increased test coverage (60%&nbsp;&rarr;&nbsp;81%); led Playwright
-                  proof-of-concept and integration/API testing; adopted Infrastructure as Code;
-                  established telemetry dashboards to monitor quality gates and SLA performance
-                  targets (&le;2s&nbsp;API&nbsp;p95, &lt;5s&nbsp;UI&nbsp;p95).
+                  Owned security, privacy, Business Continuity &amp; Disaster Recovery, and
+                  Responsible AI release-readiness workstreams, producing audit-ready evidence and
+                  reducing compliance friction for production releases.
+                </li>
+                <li>
+                  Mentored entry-level engineers and interns through onboarding, technical design
+                  discussions, code reviews, and project execution, helping interns complete
+                  internship deliverables.
                 </li>
               </ul>
+            </div>
 
-              {/* Skills / Tech / Frameworks */}
-              <h4 className="text-lg font-semibold mt-6 mb-3">Skills / Tech / Frameworks</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Microsoft — Software Engineer II / Software Engineer */}
+            <div className="ms-card relative border-l-4 border-l-[var(--primary)]">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
                 <div>
-                  <p className="text-sm font-medium mb-2 text-[var(--primary)]">AI / Agentic</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {[
-                      "MCP",
-                      "LLM Integration",
-                      "Prompt Engineering",
-                      "Responsible AI",
-                      "AI Agent Platforms",
-                    ].map(skill => (
-                      <span
-                        key={skill}
-                        className="bg-[var(--muted)] text-[var(--foreground)] border border-[var(--border)] px-2 py-0.5 rounded-full text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <h3 className="text-xl font-semibold">Software Engineer II / Software Engineer</h3>
+                  <p className="text-sm text-[var(--muted-foreground)] mt-0.5">Redmond, WA</p>
                 </div>
-                <div>
-                  <p className="text-sm font-medium mb-2 text-[var(--primary)]">Cloud / Platform</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {[
-                      "Serverless Functions",
-                      "Message Queues / Event-Driven",
-                      "Container Orchestration",
-                      "Cloud PaaS",
-                    ].map(skill => (
-                      <span
-                        key={skill}
-                        className="bg-[var(--muted)] text-[var(--foreground)] border border-[var(--border)] px-2 py-0.5 rounded-full text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex items-center gap-2 text-[var(--muted-foreground)] shrink-0">
+                  <Badge href="https://microsoft.com">
+                    <Image
+                      alt="Microsoft logomark"
+                      src="/microsoft-logo.png"
+                      className="!mr-1"
+                      width="14"
+                      height="14"
+                    />
+                    Microsoft
+                  </Badge>
+                  <span>•</span>
+                  <span className="text-sm">Sep 2019 – Sep 2024</span>
                 </div>
+              </div>
+              <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 text-sm leading-relaxed">
+                <li>
+                  Built secure REST and GraphQL API services for risk and approval management
+                  applications, achieving &lt;2s p95 latency with JWT bearer authentication,
+                  structured logging, automated alerts, CI/CD, and unit/integration test coverage.
+                </li>
+                <li>
+                  Improved system performance and scalability, achieving &lt;2s API latency at the
+                  95th percentile and &lt;5s UI load times through caching strategies and
+                  service-level optimizations.
+                </li>
+                <li>
+                  Built React applications and reusable npm component libraries adopted by 4–5
+                  engineering teams, increasing developer velocity and enforcing consistent UI,
+                  accessibility, and observability patterns across applications.
+                </li>
+                <li>
+                  Strengthened engineering quality by implementing automated testing, CI/CD
+                  pipelines, and release gates, increasing code coverage and enabling safer, faster
+                  production releases.
+                </li>
+                <li>
+                  Led Playwright-based automated UI integration and accessibility testing, improving
+                  confidence in frontend releases and reducing regression risk.
+                </li>
+                <li>
+                  Migrated microservices from AKS to Azure Container Apps, reducing infrastructure
+                  overhead across 4 service teams, lowering costs by ~4%, and enabling more reliable
+                  zero-downtime deployments.
+                </li>
+              </ul>
+            </div>
+
+            {/* American Express — Software Engineer */}
+            <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
                 <div>
-                  <p className="text-sm font-medium mb-2 text-[var(--primary)]">DevOps / IaC</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {[
-                      "CI/CD Pipelines",
-                      "YAML",
-                      "Infrastructure as Code",
-                      "GitOps",
-                      "Zero-downtime Deployments",
-                    ].map(skill => (
-                      <span
-                        key={skill}
-                        className="bg-[var(--muted)] text-[var(--foreground)] border border-[var(--border)] px-2 py-0.5 rounded-full text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <p className="text-sm font-medium mb-2 text-[var(--primary)]">
-                    Quality / Observability
+                  <h3 className="text-xl font-semibold">Software Engineer</h3>
+                  <p className="text-sm text-[var(--muted-foreground)] mt-0.5">
+                    Fort Lauderdale, FL
                   </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {[
-                      "Playwright",
-                      "Unit / Integration Tests",
-                      "Coverage Gates",
-                      "Telemetry Dashboards",
-                      "Accessibility",
-                      "Application Monitoring",
-                    ].map(skill => (
-                      <span
-                        key={skill}
-                        className="bg-[var(--muted)] text-[var(--foreground)] border border-[var(--border)] px-2 py-0.5 rounded-full text-xs"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
                 </div>
-              </div>
-
-              {/* Project Tiles */}
-              <h4 className="text-lg font-semibold mt-6 mb-3">Key Projects</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {[
-                  {
-                    title: "AI-Powered Summaries",
-                    desc: "LLM-integrated summaries with responsible AI compliance",
-                  },
-                  {
-                    title: "MCP Agentic Tools",
-                    desc: "Agentic tools surfacing domain data via enterprise AI assistant",
-                  },
-                  {
-                    title: "Multi-Agent Orchestrator",
-                    desc: "Top-level orchestrator connecting specialized sub-agents at scale",
-                  },
-                  {
-                    title: "Event-Driven Processing Platform",
-                    desc: "Serverless functions, message queues, and queue triggers",
-                  },
-                  {
-                    title: "IaC + CI/CD for Production Readiness",
-                    desc: "Infrastructure as Code, YAML pipelines, quality gates, and telemetry",
-                  },
-                ].map(project => (
-                  <div
-                    key={project.title}
-                    className="border border-[var(--border)] rounded-lg p-3 bg-[var(--muted)]"
-                  >
-                    <p className="font-medium text-sm">{project.title}</p>
-                    <p className="text-xs text-[var(--muted-foreground)] mt-1">{project.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Software Engineer</h3>
-                <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>
-                    <Badge href="https://americanexpress.com">
-                      <Image
-                        alt="American Express logomark"
-                        src="/amex-logo.png"
-                        className="!mr-1"
-                        width="14"
-                        height="14"
-                      />
-                      American Express
-                    </Badge>
-                  </span>
+                <div className="flex items-center gap-2 text-[var(--muted-foreground)] shrink-0">
+                  <Badge href="https://americanexpress.com">
+                    <Image
+                      alt="American Express logomark"
+                      src="/amex-logo.png"
+                      className="!mr-1"
+                      width="14"
+                      height="14"
+                    />
+                    American Express
+                  </Badge>
                   <span>•</span>
-                  <span>Jan 2018 - Aug 2019</span>
+                  <span className="text-sm">Jan 2018 – Aug 2019</span>
                 </div>
               </div>
-              <p className="mb-4">
-                As a part of the Global Risk Technology team, I helped deliver the Norwegian SAS
-                Co-Brand Consumer Card by creating a REST API used to get applicant data to make
-                Risk decisions on prospective customers.
-              </p>
-              <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-1">
+              <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 text-sm leading-relaxed">
                 <li>
-                  I optimized and uplifted our database access component to use a new internal
-                  Database API which helped lower our platforms database operations by 50% which
-                  contributed to meeting SLA for the Norwegian SAS Co-Brand Consumer card products
-                  and Amazon Co-Brand Business cards.
+                  Built a REST API for Norwegian SAS Co-Brand Consumer Card risk decisioning,
+                  enabling applicant data retrieval for prospective customer evaluations.
                 </li>
                 <li>
-                  To aid our campus recruitment team, I along with some of my peers were asked to
-                  uplift our Candidate Intake Portal which was used most recently at the 2019 NSBE
-                  conference.
+                  Modernized the database access layer onto an internal Database API, reducing
+                  platform database operations by ~50% and helping meet SLA targets for co-brand
+                  card products.
                 </li>
-                <li>Leading enhancement to our team&apos;s CI/CD pipeline.</li>
                 <li>
-                  My team received 1st place in the company wide new hire hackathon by delivering an
-                  app that visually displayed and monitored payment information in real time using
-                  graphs, charts and heat maps.
+                  Improved engineering delivery through Candidate Intake Portal enhancements and
+                  CI/CD pipeline improvements.
                 </li>
               </ul>
             </div>
-            <div className="ms-card relative border-l-4 border-l-[var(--secondary)]">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
-                <div className="flex items-center gap-2 text-[var(--muted-foreground)]">
-                  <span>
-                    <Badge href="https://americanexpress.com">
-                      <Image
-                        alt="American Express logomark"
-                        src="/amex-logo.png"
-                        className="!mr-1"
-                        width="14"
-                        height="14"
-                      />
-                      American Express
-                    </Badge>
-                  </span>
-                  <span>•</span>
-                  <span>Jun 2016 - Aug 2016</span>
+
+            {/* Internships */}
+            <div className="ms-card relative border-l-4 border-l-[var(--border)]">
+              <h3 className="text-lg font-semibold mb-4 text-[var(--muted-foreground)]">
+                Internships
+              </h3>
+              <div className="space-y-5">
+                <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                    <p className="font-medium text-sm">Software Engineering Intern</p>
+                    <div className="flex items-center gap-2 text-xs text-[var(--muted-foreground)]">
+                      <Badge href="https://americanexpress.com">
+                        <Image
+                          alt="American Express logomark"
+                          src="/amex-logo.png"
+                          className="!mr-1"
+                          width="12"
+                          height="12"
+                        />
+                        American Express
+                      </Badge>
+                      <span>Jun – Aug 2017</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--muted-foreground)]">
+                    Built a Java-based automation tool for business-rule database synchronization,
+                    reducing a manual 4–5 day process to less than 1 day.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                    <p className="font-medium text-sm">Software Engineering Intern</p>
+                    <div className="flex items-center gap-2 text-xs text-[var(--muted-foreground)]">
+                      <Badge href="https://americanexpress.com">
+                        <Image
+                          alt="American Express logomark"
+                          src="/amex-logo.png"
+                          className="!mr-1"
+                          width="12"
+                          height="12"
+                        />
+                        American Express
+                      </Badge>
+                      <span>Jun – Aug 2016</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--muted-foreground)]">
+                    Improved a C#/.NET/SQL web application by optimizing code, updating UI flows, and
+                    aligning the codebase to a layered architecture across data, business, and
+                    presentation tiers.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                    <p className="font-medium text-sm">Software Development Intern</p>
+                    <div className="flex items-center gap-2 text-xs text-[var(--muted-foreground)]">
+                      <span className="font-medium">LifeWallet</span>
+                      <span>May – Aug 2015</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--muted-foreground)]">
+                    Built a web-based bug reporting application using HTML, CSS, JavaScript, and
+                    CloudKit JS, reducing manual entry of handwritten tester reports.
+                  </p>
                 </div>
               </div>
-              <p className="mb-4">
-                As a part of the Global Credit Bureau Solutions team, I assisted in the uplift of
-                their web application (C#, .NET, SQL) by optimizing the existing code, improving the
-                user interface, and aligning the code base to AMEX Reference Architecture standards
-                by implementing and creating a 3 layer architecture (Data, Business, Presentation)
-                for the application.
-              </p>
-              <p className="mb-4">
-                During the final 2 weeks of the internship, I, along with the other interns created
-                a web application to enhance the // campus recruitment process using SQLite,
-                Express, Angular, and Node which was served from a Raspberry Pi 3.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Education Section */}
-      <section className="ms-section bg-[var(--muted)]">
+      {/* ── Skills ───────────────────────────────────────── */}
+      <section id="skills" className="ms-section bg-[var(--muted)]">
+        <div className="ms-container">
+          <h2 className="text-3xl font-bold mb-2 text-center">Skills</h2>
+          <p className="text-center text-[var(--muted-foreground)] mb-12">
+            Core technologies and practices
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillCategories.map(({ id, label }) => (
+              <div key={id} className="ms-card">
+                <h3 className="text-base font-semibold mb-3 text-[var(--primary)]">{label}</h3>
+                <SkillsSection category={id} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Education ────────────────────────────────────── */}
+      <section className="ms-section">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Education</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">Academic background</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="ms-card">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Bachelor of Computer Science</h3>
-                <span className="text-[var(--muted-foreground)]">2017</span>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-semibold">Bachelor of Computer Science</h3>
+                <span className="text-sm text-[var(--muted-foreground)]">2017</span>
               </div>
               <p className="text-[var(--primary)] font-medium mb-2">
                 <Badge href="https://ufl.edu">
@@ -448,13 +497,15 @@ export default function Home() {
                   University of Florida
                 </Badge>
               </p>
-              <p>Core computer science fundamentals with minor in business administration.</p>
+              <p className="text-sm text-[var(--muted-foreground)]">
+                Core computer science fundamentals with minor in business administration.
+              </p>
             </div>
 
             <div className="ms-card">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">iOS Development Bootcamp</h3>
-                <span className="text-[var(--muted-foreground)]">January 2016 – May 2016</span>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-semibold">iOS Development Bootcamp</h3>
+                <span className="text-sm text-[var(--muted-foreground)]">Jan – May 2016</span>
               </div>
               <p className="text-[var(--primary)] font-medium mb-2">
                 <Badge href="https://codepath.org">
@@ -468,149 +519,77 @@ export default function Home() {
                   CodePath University
                 </Badge>
               </p>
-              <p>
-                Completed a 12 week iOS bootcamp (using Swift) offered by CodePath where students
-                met for two hour in-person classes twice a week and completed one project per week
-                (5-10 hours of development time). Created a sneaker community and valuation app
-                called KickSwap along with 2 other students in the final 6 weeks of the program.
+              <p className="text-sm text-[var(--muted-foreground)]">
+                12-week Swift/iOS program. Built KickSwap, a sneaker community and valuation app, as
+                a capstone project.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      {/* <section className="ms-section">
-        <div className="ms-container">
-          <h2 className="text-3xl font-bold mb-2 text-center">Projects</h2>
-          <p className="text-center text-[var(--muted-foreground)] mb-12">Some of my recent work</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="ms-card group hover:shadow-md transition-shadow">
-              <div className="aspect-video bg-[var(--muted)] rounded mb-4 flex items-center justify-center">
-                <span className="text-4xl text-[var(--muted-foreground)]">Project 1</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--primary)] transition-colors">
-                E-Commerce Platform
-              </h3>
-              <p className="text-[var(--muted-foreground)] mb-4">
-                A full-featured online store with cart, checkout, and payment integration.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">React</span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">Next.js</span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">Stripe</span>
-              </div>
-            </div>
-
-            <div className="ms-card group hover:shadow-md transition-shadow">
-              <div className="aspect-video bg-[var(--muted)] rounded mb-4 flex items-center justify-center">
-                <span className="text-4xl text-[var(--muted-foreground)]">Project 2</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--primary)] transition-colors">
-                Task Management App
-              </h3>
-              <p className="text-[var(--muted-foreground)] mb-4">
-                A collaborative task management tool with real-time updates.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">TypeScript</span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">React</span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">Firebase</span>
-              </div>
-            </div>
-
-            <div className="ms-card group hover:shadow-md transition-shadow">
-              <div className="aspect-video bg-[var(--muted)] rounded mb-4 flex items-center justify-center">
-                <span className="text-4xl text-[var(--muted-foreground)]">Project 3</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--primary)] transition-colors">
-                Health & Fitness Tracker
-              </h3>
-              <p className="text-[var(--muted-foreground)] mb-4">
-                Mobile app for tracking workouts, nutrition, and health metrics.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">
-                  React Native
-                </span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">Express</span>
-                <span className="px-2 py-1 bg-[var(--muted)] text-xs rounded-full">MongoDB</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-12">
-            <a href="#" className="ms-button">
-              View All Projects
-            </a>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Contact Section */}
+      {/* ── Contact ──────────────────────────────────────── */}
       <section id="contact" className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Get In Touch</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
-            Let&apos;s discuss your project
+            Open to engineering leadership conversations, staff/principal roles, and impactful
+            platform opportunities.
           </p>
-
-          <div className="ms-card max-w-2xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block mb-2 font-medium">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-[var(--border)] rounded-sm bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
-                    placeholder="Your name"
+          <div className="ms-card max-w-lg mx-auto text-center space-y-6">
+            <p className="text-[var(--muted-foreground)]">
+              The best way to reach me is via email or LinkedIn. I&apos;m happy to connect about
+              senior full-stack, platform engineering, or AI/agentic systems roles.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <a
+                href="mailto:egs104@gmail.com"
+                className="ms-button inline-flex items-center justify-center gap-2"
+              >
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block mb-2 font-medium">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-[var(--border)] rounded-sm bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
-                    placeholder="your.email@example.com"
+                </svg>
+                Email Me
+              </a>
+              {/* TODO: replace # with LinkedIn profile URL when ready */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ms-button bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--muted)] inline-flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/egs104"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ms-button bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--muted)] inline-flex items-center justify-center gap-2"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clipRule="evenodd"
                   />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block mb-2 font-medium">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="w-full px-4 py-2 border border-[var(--border)] rounded-sm bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
-                  placeholder="Project inquiry"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block mb-2 font-medium">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={5}
-                  className="w-full px-4 py-2 border border-[var(--border)] rounded-sm bg-[var(--background)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent"
-                  placeholder="Tell me about your project..."
-                ></textarea>
-              </div>
-
-              <button type="submit" className="ms-button">
-                Send Message
-              </button>
-            </form>
+                </svg>
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
       </section>
