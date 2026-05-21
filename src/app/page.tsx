@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ImpactCard from "./components/ImpactCard";
+import SideProjectCard from "./components/SideProjectCard";
 import SkillsSection from "./components/SkillsSection";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -444,6 +445,19 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Applied AI Side Project ──────────────────────── */}
+      <section id="side-projects" className="ms-section">
+        <div className="ms-container">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-2 text-center">Applied AI Side Project</h2>
+            <p className="text-center text-[var(--muted-foreground)] mb-8 text-sm">
+              Hands-on proof point built outside of work
+            </p>
+            <SideProjectCard />
           </div>
         </div>
       </section>
