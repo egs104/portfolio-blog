@@ -524,14 +524,10 @@ export default function Home() {
       <section id="contact" className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Get In Touch</h2>
-          <p className="text-center text-[var(--muted-foreground)] mb-12">
-            Open to engineering leadership conversations, staff/principal roles, and impactful
-            platform opportunities.
-          </p>
+          <br />
           <div className="ms-card max-w-lg mx-auto text-center space-y-6">
             <p className="text-[var(--muted-foreground)]">
-              The best way to reach me is via email or LinkedIn. I&apos;m happy to connect about
-              senior full-stack, platform engineering, or AI/agentic systems roles.
+              The best way to reach me is via email or LinkedIn.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
               <a
