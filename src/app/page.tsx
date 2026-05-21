@@ -25,10 +25,10 @@ const impactItems = [
   {
     icon: "🔗",
     title: "Shared Service & Agent Platform",
-    metric: "13+",
+    metric: "16+",
     metricLabel: "services",
     description:
-      "Scaled a shared service and agent platform used by 13+ downstream services, enabling consistent integration, deployment, and release coordination across teams.",
+      "Scaled a shared service and agent platform used by 16+ downstream services, enabling consistent integration, deployment, and release coordination across teams.",
   },
   {
     icon: "📡",
@@ -52,15 +52,15 @@ const impactItems = [
     metric: "4 teams",
     metricLabel: "migrated",
     description:
-      "Migrated microservices from AKS to Azure Container Apps, reducing infrastructure overhead across 4 service teams, lowering costs by ~4%, and improving zero-downtime deployment reliability.",
+      "Migrated microservices from AKS to Azure Container Apps, reducing infrastructure maintenance efforts across 4 service teams, lowering costs by ~4%, and improving zero-downtime deployment reliability.",
   },
   {
     icon: "🧩",
     title: "Shared React/npm Component Library",
-    metric: "4–5 teams",
+    metric: "4 teams",
     metricLabel: "adopted",
     description:
-      "Built reusable React/npm component libraries adopted by 4–5 engineering teams, standardizing accessibility, performance, observability, and UI implementation patterns.",
+      "Built reusable React/npm component libraries adopted by 4 engineering teams, standardizing accessibility, performance, observability, and UI implementation patterns.",
   },
   {
     icon: "⚡",
@@ -96,9 +96,7 @@ export default function Home() {
               <p className="text-sm font-medium uppercase tracking-widest opacity-80 mb-2">
                 Microsoft · Senior Software Engineer
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                Eric Suarez
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">Eric Suarez</h1>
               <p className="text-xl md:text-2xl font-medium mb-4 opacity-95">
                 Senior Full-Stack Software Engineer building AI-powered enterprise platforms.
               </p>
@@ -110,15 +108,6 @@ export default function Home() {
                 systems.
               </p>
               <div className="flex flex-wrap gap-3">
-                {/* TODO: replace href with /Eric_Suarez_Senior_Software_Engineer_Resume.pdf when ready */}
-                <a
-                  href="https://www.linkedin.com/in/TODO"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ms-button bg-white text-[var(--primary)] hover:bg-opacity-90 font-semibold"
-                >
-                  View LinkedIn / Resume
-                </a>
                 <a
                   href="#experience"
                   className="ms-button bg-transparent border border-white hover:bg-white hover:bg-opacity-10"
@@ -179,9 +168,9 @@ export default function Home() {
             <p className="text-lg">
               My work spans agent orchestration and MCP integrations, secure REST and GraphQL APIs,
               React/TypeScript frontends, Azure cloud infrastructure, and the reliability and
-              observability systems that keep it all running. I take a platform-engineering mindset —
-              building shared foundations that let partner teams ship faster with consistent quality,
-              accessibility, and compliance.
+              observability systems that keep it all running. I take a platform-engineering mindset
+              — building shared foundations that let partner teams ship faster with consistent
+              quality, accessibility, and compliance.
             </p>
             <p className="text-lg">
               I care deeply about measurable impact: reducing incident triage from 30+ minutes to
@@ -242,13 +231,14 @@ export default function Home() {
               </div>
               <ul className="list-disc list-inside text-[var(--muted-foreground)] space-y-2 text-sm leading-relaxed">
                 <li>
-                  Led development of a unified Customer Success platform, onboarding multiple partner
-                  teams and establishing standardized APIs, integration patterns, and environment
-                  readiness to scale toward a ~10K-user Customer Success organization.
+                  Led development of a unified Customer Success platform, onboarding multiple
+                  partner teams and establishing standardized APIs, integration patterns, and
+                  environment readiness to scale toward a ~10K-user Customer Success organization.
                 </li>
                 <li>
                   Scaled a shared service and agent platform used by 13+ downstream services,
-                  enabling consistent integration, deployment, and release coordination across teams.
+                  enabling consistent integration, deployment, and release coordination across
+                  teams.
                 </li>
                 <li>
                   Architected an agent orchestration layer routing Customer Success workflows across
@@ -261,9 +251,9 @@ export default function Home() {
                   requirements, and production readiness criteria.
                 </li>
                 <li>
-                  Designed and shipped AI-powered approval workflows, including AI-generated Approval
-                  Summary and MCP integrations, driving ~6.5K monthly uses and enabling users to
-                  review and act on requests in an average of ~146 seconds per decision.
+                  Designed and shipped AI-powered approval workflows, including AI-generated
+                  Approval Summary and MCP integrations, driving ~6.5K monthly uses and enabling
+                  users to review and act on requests in an average of ~146 seconds per decision.
                 </li>
                 <li>
                   Reduced incident triage time by ~90% by improving logging, telemetry, and
@@ -292,7 +282,9 @@ export default function Home() {
             <div className="ms-card relative border-l-4 border-l-[var(--primary)]">
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-xl font-semibold">Software Engineer II / Software Engineer</h3>
+                  <h3 className="text-xl font-semibold">
+                    Software Engineer II / Software Engineer
+                  </h3>
                   <p className="text-sm text-[var(--muted-foreground)] mt-0.5">Redmond, WA</p>
                 </div>
                 <div className="flex items-center gap-2 text-[var(--muted-foreground)] shrink-0">
@@ -431,8 +423,8 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="text-sm text-[var(--muted-foreground)]">
-                    Improved a C#/.NET/SQL web application by optimizing code, updating UI flows, and
-                    aligning the codebase to a layered architecture across data, business, and
+                    Improved a C#/.NET/SQL web application by optimizing code, updating UI flows,
+                    and aligning the codebase to a layered architecture across data, business, and
                     presentation tiers.
                   </p>
                 </div>
@@ -562,9 +554,8 @@ export default function Home() {
                 </svg>
                 Email Me
               </a>
-              {/* TODO: replace # with LinkedIn profile URL when ready */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/eric-suarez-72332388/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ms-button bg-[var(--card-bg)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--muted)] inline-flex items-center justify-center gap-2"

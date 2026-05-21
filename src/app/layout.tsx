@@ -113,8 +113,10 @@ export default function RootLayout({
                     </a>
                   </li>
                   <li>
-                    {/* TODO: replace # with LinkedIn profile URL when ready */}
-                    <a href="#" className="hover:text-[var(--primary)]">
+                    <a
+                      href="https://www.linkedin.com/in/eric-suarez-72332388/"
+                      className="hover:text-[var(--primary)]"
+                    >
                       LinkedIn
                     </a>
                   </li>
