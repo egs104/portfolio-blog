@@ -16,9 +16,8 @@ const techTags = [
   "Postgres",
   "MCP",
   "Claude Desktop",
-  "Inventory Analytics",
-  "Business Automation",
-  "AI Operations Assistant",
+  "Inventory analysis",
+  "Operational reporting",
 ];
 
 const highlights = [
@@ -57,7 +56,10 @@ export default function SideProjectCard() {
 
       <ul className="space-y-1.5 mb-5">
         {highlights.map(highlight => (
-          <li key={highlight} className="flex items-start gap-2 text-sm text-[var(--muted-foreground)]">
+          <li
+            key={highlight}
+            className="flex items-start gap-2 text-sm text-[var(--muted-foreground)]"
+          >
             <span className="text-[var(--primary)] mt-0.5 shrink-0" aria-hidden="true">
               ›
             </span>

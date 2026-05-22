@@ -21,15 +21,15 @@ const impactItems = [
     metric: "~6.5K/mo",
     metricLabel: "uses",
     description:
-      "Delivered an AI-generated summary experience integrated into enterprise approval workflows, driving ~6.5K monthly uses and helping users review and act on requests in an average of ~146 seconds per decision.",
+      "Delivered an AI-generated summary experience for approval workflows, driving ~6.5K monthly uses and helping users review and act on requests in an average of ~146 seconds per decision.",
   },
   {
     icon: "🔗",
-    title: "Shared Service & Agent Platform",
+    title: "Shared Services Platform",
     metric: "16+",
     metricLabel: "services",
     description:
-      "Scaled a shared service and agent platform used by 16+ downstream services, enabling consistent integration, deployment, and release coordination across teams.",
+      "Scaled shared platform services used by 16+ downstream services, improving consistency across integration, deployment, and release coordination.",
   },
   {
     icon: "📡",
@@ -61,7 +61,7 @@ const impactItems = [
     metric: "4 teams",
     metricLabel: "adopted",
     description:
-      "Built reusable React/npm component libraries adopted by 4 engineering teams, standardizing accessibility, performance, observability, and UI implementation patterns.",
+      "Built reusable React/npm component libraries adopted by 4 engineering teams, standardizing accessibility, performance, and UI implementation patterns.",
   },
   {
     icon: "⚡",
@@ -80,10 +80,10 @@ const skillCategories: Array<{
   { id: "languages", label: "Languages & Frameworks" },
   { id: "backend", label: "Backend & APIs" },
   { id: "frontend", label: "Frontend" },
-  { id: "cloud", label: "Cloud & Platform" },
-  { id: "ai", label: "AI & Agentic Systems" },
+  { id: "cloud", label: "Cloud & DevOps" },
+  { id: "ai", label: "AI & Applied AI" },
   { id: "quality", label: "Quality & Reliability" },
-  { id: "leadership", label: "Leadership" },
+  { id: "leadership", label: "Technical Leadership" },
 ];
 
 export default function Home() {
@@ -99,14 +99,14 @@ export default function Home() {
               </p>
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">Eric Suarez</h1>
               <p className="text-xl md:text-2xl font-medium mb-4 opacity-95">
-                Senior Full-Stack Software Engineer building AI-powered enterprise platforms.
+                Senior Full-Stack Software Engineer building reliable, scalable product systems.
               </p>
               <p className="text-base md:text-lg mb-8 opacity-85 leading-relaxed max-w-prose">
-                8+ years of experience building scalable backend services, performant
-                React/TypeScript applications, agentic workflows, and Azure cloud platforms. I work
-                across the stack — from secure REST/GraphQL APIs and distributed services to
-                accessible frontend experiences, observability, CI/CD, and production-ready AI
-                systems.
+                I&apos;m a Microsoft Senior Software Engineer with 8+ years of experience building
+                backend services, React/TypeScript applications, cloud infrastructure, and
+                production systems. My work spans secure REST/GraphQL APIs, accessible frontend
+                experiences, Azure-based services, observability, CI/CD, and applied AI features
+                used in enterprise workflows.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
@@ -149,8 +149,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <div className="ms-card max-w-3xl mx-auto space-y-4">
             <p className="text-lg">
-              I&apos;m <span className="font-semibold">Eric Suarez</span>, a Senior Full-Stack
-              Software Engineer at{" "}
+              I&apos;m a Senior Full-Stack Software Engineer at{" "}
               <span className="not-prose">
                 <Badge href="https://microsoft.com">
                   <Image
@@ -162,32 +161,29 @@ export default function Home() {
                   />
                   Microsoft
                 </Badge>
-              </span>
-              , where I build AI-powered enterprise platforms, shared services, and production-grade
-              full-stack systems that serve thousands of users across multiple engineering teams.
+              </span>{" "}
+              focused on building reliable, maintainable systems across the frontend, backend, and
+              cloud infrastructure layers.
             </p>
             <p className="text-lg">
-              My work spans agent orchestration and MCP integrations, secure REST and GraphQL APIs,
-              React/TypeScript frontends, Azure cloud infrastructure, and the reliability and
-              observability systems that keep it all running. I take a platform-engineering mindset
-              — building shared foundations that let partner teams ship faster with consistent
-              quality, accessibility, and compliance.
+              I&apos;ve worked on secure REST and GraphQL APIs, React/TypeScript applications,
+              shared component libraries, Azure services, observability, automated testing, and
+              deployment pipelines. More recently, I&apos;ve also built applied AI experiences and
+              MCP integrations that help users make faster, better-informed decisions inside
+              existing business workflows.
             </p>
             <p className="text-lg">
-              I care deeply about measurable impact: reducing incident triage from 30+ minutes to
-              under 3, delivering hundreds of thousands in Azure savings, and shipping AI features
-              that change how people work. I also invest in the people side — mentoring engineers,
-              leading technical design reviews, and aligning partner teams on API contracts and
-              production readiness.
+              I enjoy turning ambiguous product and technical problems into practical systems that
+              teams can operate, extend, and trust in production.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── Featured Impact ───────────────────────────────── */}
+      {/* ── Engineering Highlights ─────────────────────────── */}
       <section className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
-          <h2 className="text-3xl font-bold mb-2 text-center">Featured Impact</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center">Engineering Highlights</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
             Selected outcomes from production work
           </p>
@@ -204,7 +200,7 @@ export default function Home() {
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Work Experience</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
-            My professional journey
+            Selected roles and production work
           </p>
 
           <div className="space-y-8">
@@ -234,27 +230,26 @@ export default function Home() {
                 <li>
                   Led development of a unified Customer Success platform, onboarding multiple
                   partner teams and establishing standardized APIs, integration patterns, and
-                  environment readiness to scale toward a ~10K-user Customer Success organization.
+                  deployment readiness to scale toward a ~10K-user Customer Success organization.
                 </li>
                 <li>
-                  Scaled a shared service and agent platform used by 13+ downstream services,
-                  enabling consistent integration, deployment, and release coordination across
-                  teams.
+                  Scaled shared platform services used by 13+ downstream services, enabling
+                  consistent integration, deployment, and release coordination across teams.
                 </li>
                 <li>
-                  Architected an agent orchestration layer routing Customer Success workflows across
-                  multiple domain agents, defining integration contracts, workflow boundaries, and
-                  extension points for scalable enterprise scenarios.
+                  Architected a workflow orchestration layer that routed Customer Success scenarios
+                  across multiple domain services and agents, with clear API contracts and ownership
+                  boundaries.
                 </li>
                 <li>
                   Authored design docs and led technical reviews for AI Workspace integration
                   patterns, aligning partner teams on API contracts, workflow boundaries, security
-                  requirements, and production readiness criteria.
+                  requirements, and release criteria.
                 </li>
                 <li>
-                  Designed and shipped AI-powered approval workflows, including AI-generated
-                  Approval Summary and MCP integrations, driving ~6.5K monthly uses and enabling
-                  users to review and act on requests in an average of ~146 seconds per decision.
+                  Designed and shipped approval workflow features, including AI-generated summaries
+                  and MCP integrations, driving ~6.5K monthly uses and enabling users to review and
+                  act on requests in an average of ~146 seconds per decision.
                 </li>
                 <li>
                   Reduced incident triage time by ~90% by improving logging, telemetry, and
@@ -268,8 +263,8 @@ export default function Home() {
                 </li>
                 <li>
                   Owned security, privacy, Business Continuity &amp; Disaster Recovery, and
-                  Responsible AI release-readiness workstreams, producing audit-ready evidence and
-                  reducing compliance friction for production releases.
+                  Responsible AI readiness work, producing release evidence needed for production
+                  launches.
                 </li>
                 <li>
                   Mentored entry-level engineers and interns through onboarding, technical design
@@ -316,12 +311,12 @@ export default function Home() {
                 </li>
                 <li>
                   Built React applications and reusable npm component libraries adopted by 4–5
-                  engineering teams, increasing developer velocity and enforcing consistent UI,
-                  accessibility, and observability patterns across applications.
+                  engineering teams, improving reuse and consistency across UI, accessibility, and
+                  observability patterns.
                 </li>
                 <li>
                   Strengthened engineering quality by implementing automated testing, CI/CD
-                  pipelines, and release gates, increasing code coverage and enabling safer, faster
+                  pipelines, and release checks, increasing code coverage and enabling safer, faster
                   production releases.
                 </li>
                 <li>
@@ -455,7 +450,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-2 text-center">Applied AI Side Project</h2>
             <p className="text-center text-[var(--muted-foreground)] mb-8 text-sm">
-              Hands-on proof point built outside of work
+              A practical project built outside of work
             </p>
             <SideProjectCard />
           </div>
@@ -537,7 +532,7 @@ export default function Home() {
       {/* ── Contact ──────────────────────────────────────── */}
       <section id="contact" className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
-          <h2 className="text-3xl font-bold mb-2 text-center">Get In Touch</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center">Contact</h2>
           <br />
           <div className="ms-card max-w-lg mx-auto text-center space-y-6">
             <p className="text-[var(--muted-foreground)]">
@@ -562,7 +557,7 @@ export default function Home() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                Email Me
+                Email
               </a>
               <a
                 href="https://www.linkedin.com/in/eric-suarez-72332388/"

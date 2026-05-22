@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Eric Suarez | Senior Full-Stack Software Engineer | AI Platforms, Azure, React, .NET",
+  title: "Eric Suarez | Senior Full-Stack Software Engineer | Microsoft",
   description:
-    "Senior Full-Stack Software Engineer at Microsoft building AI-powered enterprise platforms, secure REST/GraphQL APIs, React/TypeScript applications, Azure cloud services, agentic workflows, and reliable production systems.",
+    "Senior Full-Stack Software Engineer at Microsoft building backend services, React/TypeScript applications, Azure cloud systems, and applied AI features with a focus on reliability, performance, and engineering quality.",
   openGraph: {
     title: "Eric Suarez — Senior Full-Stack Software Engineer",
     description:
-      "AI Platforms • Azure • React/TypeScript • C#/.NET • Agentic Workflows • Production Reliability",
+      "Microsoft engineer focused on full-stack systems, Azure, React/TypeScript, C#/.NET, reliability, and applied AI.",
     type: "website",
     url: "https://egstech.vercel.app",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eric Suarez — Senior Full-Stack Software Engineer",
     description:
-      "AI Platforms • Azure • React/TypeScript • C#/.NET • Agentic Workflows • Production Reliability",
+      "Microsoft engineer focused on full-stack systems, Azure, React/TypeScript, C#/.NET, reliability, and applied AI.",
   },
 };
 
@@ -81,8 +81,8 @@ export default function RootLayout({
               <div>
                 <h3 className="font-semibold mb-2">Eric Suarez</h3>
                 <p className="text-[var(--muted-foreground)] text-sm">
-                  Senior Full-Stack Software Engineer building AI-powered enterprise platforms at
-                  Microsoft.
+                  Senior Full-Stack Software Engineer at Microsoft focused on reliable systems,
+                  product engineering, and cloud-native development.
                 </p>
               </div>
               <div>
