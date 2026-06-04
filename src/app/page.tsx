@@ -25,11 +25,11 @@ const impactItems = [
   },
   {
     icon: "🔗",
-    title: "Shared Services Platform",
+    title: "Agent Deployment & Integration Model",
     metric: "16+",
-    metricLabel: "services",
+    metricLabel: "agents",
     description:
-      "Scaled shared platform services used by 16+ downstream services, improving consistency across integration, deployment, and release coordination.",
+      "Defined the ALM and deployment model for a 16-agent Copilot Studio / Power Platform solution. Created reusable CI/CD templates used by the main orchestrator and downstream child agents, and standardized custom connector patterns backed by pro-code APIs for consistent deployments across environments.",
   },
   {
     icon: "📡",
@@ -233,8 +233,10 @@ export default function Home() {
                   deployment readiness to scale toward a ~10K-user Customer Success organization.
                 </li>
                 <li>
-                  Scaled shared platform services used by 13+ downstream services, enabling
-                  consistent integration, deployment, and release coordination across teams.
+                  Defined the ALM and deployment model for a 16-agent Copilot Studio / Power
+                  Platform solution, creating reusable CI/CD templates used by the main orchestrator
+                  and downstream child agents while standardizing custom connectors backed by
+                  pro-code APIs.
                 </li>
                 <li>
                   Architected a workflow orchestration layer that routed Customer Success scenarios
