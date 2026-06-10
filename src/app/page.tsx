@@ -37,7 +37,7 @@ const impactItems = [
     metric: "~90%",
     metricLabel: "triage reduction",
     description:
-      "Reduced incident triage time by ~90%, from ~30–40 minutes to ~2–3 minutes, by improving logging, telemetry, and diagnostic workflows.",
+      "Integrated AI-assisted SRE tooling into the Approval Management live-site workflow, connecting read-only Azure resource access, service logs, repository context, and troubleshooting guides to cut common production ticket triage from ~30–40 minutes to under 5 minutes.",
   },
   {
     icon: "☁️",
@@ -254,9 +254,12 @@ export default function Home() {
                   act on requests in an average of ~146 seconds per decision.
                 </li>
                 <li>
-                  Reduced incident triage time by ~90% by improving logging, telemetry, and
-                  diagnostic workflows, reducing triage from ~30–40 minutes to ~2–3 minutes during
-                  production issues.
+                  Integrated AI-assisted SRE tooling into the Approval Management live-site
+                  workflow, connecting read-only Azure resource access, service logs, repository
+                  context, and custom troubleshooting guides to accelerate root cause analysis.
+                  Reduced common production ticket triage from ~30–40 minutes to under 5 minutes,
+                  helped new on-call engineers ramp quickly, and contributed to broader org
+                  adoption across multiple engineering teams.
                 </li>
                 <li>
                   Drove Azure cost optimization across multiple services, delivering ~$284.8K in
