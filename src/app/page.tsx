@@ -258,13 +258,17 @@ export default function Home() {
                   workflow, connecting read-only Azure resource access, service logs, repository
                   context, and custom troubleshooting guides to accelerate root cause analysis.
                   Reduced common production ticket triage from ~30–40 minutes to under 5 minutes,
-                  helped new on-call engineers ramp quickly, and contributed to broader org
-                  adoption across multiple engineering teams.
+                  helped new on-call engineers ramp quickly, and contributed to broader org adoption
+                  across multiple engineering teams.
                 </li>
                 <li>
-                  Drove Azure cost optimization across multiple services, delivering ~$284.8K in
-                  savings, keeping spend ~11.8% under a ~$2.41M budget, and establishing governance
-                  practices to maintain consistent budget adherence.
+                  Owned Azure spend optimization for an org of ~20 engineering teams, partnering
+                  with engineering leadership to monitor budget trends, identify cost-growth areas,
+                  and drive team-level remediation. Built dashboards and alerts, supported App
+                  Service v2→v3 migration planning, helped right-size non-prod resources, and
+                  tracked cleanup of unused infrastructure while balancing release schedules and
+                  service reliability. During the Nov 2025–Mar 2026 review period, the org saved
+                  ~$284.8K and finished ~11.8% under a $2.41M budget.
                 </li>
                 <li>
                   Owned security, privacy, Business Continuity &amp; Disaster Recovery, and
