@@ -35,7 +35,14 @@ const skillsByCategory: Record<SkillCategory, string[]> = {
     "CI/CD",
     "Infrastructure as Code",
   ],
-  ai: ["MCP", "Responsible AI", "Azure OpenAI"],
+  ai: [
+    "MCP",
+    "Agentic Workflows",
+    "LLM Evaluation",
+    "LLM-as-Judge",
+    "Responsible AI",
+    "Azure OpenAI",
+  ],
   quality: [
     "Observability",
     "Logging",

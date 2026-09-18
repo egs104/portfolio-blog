@@ -2,6 +2,7 @@ import Image from "next/image";
 import ImpactCard from "./components/ImpactCard";
 import SideProjectCard from "./components/SideProjectCard";
 import SkillsSection from "./components/SkillsSection";
+import AgentEngineeringHighlights from "./components/AgentEngineeringHighlights";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Badge(props: any) {
@@ -181,12 +182,13 @@ export default function Home() {
       </section>
 
       {/* ── Engineering Highlights ─────────────────────────── */}
-      <section className="ms-section bg-[var(--muted)]">
+      <section id="engineering-highlights" className="ms-section bg-[var(--muted)]">
         <div className="ms-container">
           <h2 className="text-3xl font-bold mb-2 text-center">Engineering Highlights</h2>
           <p className="text-center text-[var(--muted-foreground)] mb-12">
-            Selected outcomes from production work
+            Shipped features, evaluation foundations, and production outcomes
           </p>
+          <AgentEngineeringHighlights />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {impactItems.map(item => (
               <ImpactCard key={item.title} {...item} />
@@ -231,6 +233,17 @@ export default function Home() {
                   Led development of a unified Customer Success platform, onboarding multiple
                   partner teams and establishing standardized APIs, integration patterns, and
                   deployment readiness to scale toward a ~10K-user Customer Success organization.
+                </li>
+                <li>
+                  Designed and shipped the Agent Notification &amp; Action Feed end to end across
+                  backend and frontend, with feed items persisted in Cosmos DB, idempotency keys for
+                  safe retries, event-driven real-time delivery, and automated unit, API, and UI
+                  end-to-end and accessibility testing.
+                </li>
+                <li>
+                  Built the initial Agent Evaluation Framework, combining deterministic
+                  tool-selection regression testing and LLM-as-judge evaluation across a multi-team,
+                  multi-MCP agent ecosystem.
                 </li>
                 <li>
                   Defined the ALM and deployment model for a 16-agent Copilot Studio / Power
